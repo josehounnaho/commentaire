@@ -11,8 +11,7 @@ cred = credentials.Certificate("localisatio-40250-firebase-adminsdk-az73x-9014a5
 firebase_admin.initialize_app(cred)
 def app():
 # Usernm = []
-    st.title('Welcome to :violet[Pondering] :sunglasses:')
-
+    st.title('Bienvenu dans la communauté :violet[EDUGAMES]')
     if 'username' not in st.session_state:
         st.session_state.username = ''
     if 'useremail' not in st.session_state:
