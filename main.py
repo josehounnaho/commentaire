@@ -5,9 +5,9 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-import home, trending, account, your, about, buy_me_a_coffee
+import home, account, your
 st.set_page_config(
-        page_title="Pondering",
+        page_title="Communauté",
 )
 
 
@@ -41,8 +41,8 @@ class MultiApp:
         # app = st.sidebar(
         with st.sidebar:        
             app = option_menu(
-                menu_title='Pondering ',
-                options=['Home','Account','Trending','Your Posts','about','Buy_me_a_coffee'],
+                menu_title='Community',
+                options=['Home','Account','Your Posts'],
                 icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
                 menu_icon='chat-text-fill',
                 default_index=1,
@@ -58,15 +58,10 @@ class MultiApp:
         if app == "Home":
             home.app()
         if app == "Account":
-            account.app()    
-        if app == "Trending":
-            trending.app()        
+            account.app()           
         if app == 'Your Posts':
             your.app()
-        if app == 'about':
-            about.app()    
-        if app=='Buy_me_a_coffee':
-            buy_me_a_coffee.app()    
+          
              
           
              
