@@ -7,7 +7,7 @@ import json
 import requests
 
 
-cred = credentials.Certificate("pondering-5ff7c-c033cfade319.json")
+cred = credentials.Certificate("localisatio-40250-firebase-adminsdk-az73x-9014a55c9c.json")
 firebase_admin.initialize_app(cred)
 def app():
 # Usernm = []
@@ -30,7 +30,7 @@ def app():
             if username:
                 payload["displayName"] = username 
             payload = json.dumps(payload)
-            r = requests.post(rest_api_url, params={"key": "AIzaSyApr-etDzcGcsVcmaw7R7rPxx3A09as7uw"}, data=payload)
+            r = requests.post(rest_api_url, params={"key": "AIzaSyDRmrHw6MU3ZPUzQDnL5pehIYR7tF-O4Qw"}, data=payload)
             try:
                 return r.json()['email']
             except:
@@ -51,7 +51,7 @@ def app():
                 payload["password"] = password
             payload = json.dumps(payload)
             print('payload sigin',payload)
-            r = requests.post(rest_api_url, params={"key": "AIzaSyApr-etDzcGcsVcmaw7R7rPxx3A09as7uw"}, data=payload)
+            r = requests.post(rest_api_url, params={"key": "AIzaSyDRmrHw6MU3ZPUzQDnL5pehIYR7tF-O4Qw"}, data=payload)
             try:
                 data = r.json()
                 user_info = {
@@ -72,7 +72,7 @@ def app():
                 "requestType": "PASSWORD_RESET"
             }
             payload = json.dumps(payload)
-            r = requests.post(rest_api_url, params={"key": "AIzaSyApr-etDzcGcsVcmaw7R7rPxx3A09as7uw"}, data=payload)
+            r = requests.post(rest_api_url, params={"key": "AIzaSyDRmrHw6MU3ZPUzQDnL5pehIYR7tF-O4Qw"}, data=payload)
             if r.status_code == 200:
                 return True, "Reset email Sent"
             else:
